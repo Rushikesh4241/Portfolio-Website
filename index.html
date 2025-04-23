@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rushikesh Shinde | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #111111;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(135deg, #aed747, #aed747);
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: #0d47a1;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  margin-top: 10px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px #aed747;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #aed747;
+}
+
+nav ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #0d47a1;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #a7df45;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  color: #0d47a1;
+  border-bottom: 2px solid #a7df45;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.skills-container, .certificate-grid, .projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.skill-box, .certificate-box, .project-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 48%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover, .certificate-box:hover, .project-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(99, 198, 53, 0.5);
+}
+
+.skill-box h3, .certificate-box h3, .project-box h3 {
+  color: #6bcd55;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.skill-bar {
+  height: 10px;
+  background-color: #a7df45;
+  border-radius : 5px;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #a7df45;
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #a2dc6b;
+}
+
+.project-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+  transform: scale(1.05);
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.achievement-list, .interest-list {
+  padding-left: 20px;
+}
+
+.testimonial {
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c0d27f;
+  box-shadow: 0 0 10px rgba(253, 216, 53, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+.testimonial:hover {
+  background-color: #f0f0f0;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .skill-box, .certificate-box, .project-box {
+    width: 100%;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll Animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: reveal 1s forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background: #0d47a1;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.dark-mode {
+  background-color: #212121;
+  color: #f5f5f5;
+}
+
+.dark-mode header {
+  background: linear-gradient(135deg, #121212, #212121);
+  color: #fdd835;
+}
+
+.dark-mode nav ul li a {
+  color: #fdd835;
+}
+
+.dark-mode .skill-box, 
+.dark-mode .certificate-box, 
+.dark-mode .project-box, 
+.dark-mode .testimonial {
+  background-color: #333;
+  color: #fff;
+  border-color: #444;
+}
+
+.dark-mode .download-btn {
+  background: #ffee58;
+  color: #000;
+}
+
+    
+  </style>
+</head>
+<body>
+
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <header>
+    <img src="self2.jpg" alt="Rushikesh Shinde" class="profile-pic">
+    <h1>Rushikesh Shinde</h1>
+    <p>Computer Engineering Student | MITAOE Pune</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm <strong>Rushikesh Shinde</strong>, a passionate and enthusiastic first-year Computer Engineering student at <strong>MIT Academy of Engineering, Pune</strong>. I'm deeply interested in the rapidly evolving world of technology and always curious to explore how things work behind the scenes.</p>
+      
+      <p>From a young age, I was fascinated by computers and the endless possibilities they offer. This curiosity led me to pursue engineering and now I'm focused on building a strong foundation in programming, web development, and emerging fields like <strong>Quantum Computing</strong> and <strong>Artificial Intelligence</strong>.</p>
+      
+      <p>Currently, I’m learning and working on:</p>
+      <ul>
+        <li>🔹 C Programming and Problem Solving</li>
+        <li>🔹 Web Development (HTML, CSS, JavaScript)</li>
+        <li>🔹 Version Control using Git & GitHub</li>
+        <li>🔹 Linux and Open-Source Tools</li>
+      </ul>
+    
+      <p>I enjoy participating in coding challenges, working on mini-projects, and contributing to academic group activities. Outside of academics, I like exploring new technologies, listening to podcasts on innovation, and designing user-friendly web interfaces.</p>
+    
+      <p>My goal is to become a skilled full-stack developer and contribute to real-world impactful tech projects. I believe in continuous learning, teamwork, and staying updated with the latest trends in the tech industry.</p>
+    </section>
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech in Computer Engineering</strong> – MITAOE Pune (2024 - 2028)</li>
+        <li><strong>12th (HSC)</strong> – Maharashtra Board (2023) – 85.17%</li>
+        <li><strong>10th (SSC)</strong> – Maharashtra Board (2021) – 88.40%</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill-box"><h3>C Programming</h3><div class="skill-bar" style="width: 85%;"></div></div>
+        <div class="skill-box"><h3>HTML & CSS</h3><div class="skill-bar" style="width: 90%;"></div></div>
+        <div class="skill-box"><h3>JavaScript</h3><div class="skill-bar" style="width: 75%;"></div></div>
+        <div class="skill-box"><h3>Python Basics</h3><div class="skill-bar" style="width: 70%;"></div></div>
+        <div class="skill-box"><h3>Git & GitHub</h3><div class="skill-bar" style="width: 80%;"></div></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-box">
+        <img src="linux.png" alt="Linux Password Generator" class="project-img">
+        <h3>Linux Random Password Generator</h3>
+        <p>A random passwords using tools like <code>/dev/urandom</code> and <code>openssl</code>.</p>
+      </div>
+      
+        <div class="project-box">
+          <img src="canteen.jpg" class="project-img" alt="Canteen App">
+          <h3>Canteen Management App</h3>
+          <p>Online food ordering & mess tracking full-stack app (in progress).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <div class="certificate-grid">
+        <div class="certificate-box">
+          <h3>Python Programming</h3>
+          <p>Completed beginner-level training on Python fundamentals.</p>
+          <a href="Cisco 1.pdf" class="download-btn" download><i class="fas fa-download"></i> Download</a>
+        </div>
+        <div class="certificate-box">
+          <h3>Linux Basics</h3>
+          <p>Learned command-line basics and Linux environment essentials.</p>
+          <a href="LINUX CERTICAT 1.pdf" class="download-btn" download><i class="fas fa-download"></i> Download</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <h2>Interests</h2>
+      <ul>
+        <li>Quantum Computing</li>
+        <li>UI/UX Design</li>
+        <li>Robotics</li>
+        <li>AI & Automation</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <ul>
+        <li><i class="fas fa-envelope"></i> Email: rushishinde4241@gmail.com</li>
+        <li><i class="fas fa-phone"></i> Phone: +91-8180917274</li>
+        <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/" target="_blank">rushikeshshinde</a></li>
+        <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/rushikesh-shinde-69aa82344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">rushikeshshinde</a></li>
+        <li><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Rushikesh Shinde | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+</html>

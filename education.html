@@ -1,0 +1,106 @@
+<style>
+    #education {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 40px 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+  
+    #education h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 30px;
+    }
+  
+    .timeline {
+      position: relative;
+      padding: 10px 0;
+    }
+  
+    .timeline-item {
+      position: relative;
+      margin: 30px 0;
+      padding: 25px 20px;
+      background: var(--accent-color);
+      border-left: 5px solid var(--primary-color);
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+  
+    .timeline-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba(0, 115, 230, 0.4);
+    }
+  
+    .timeline-content h3 {
+      font-size: 1.4rem;
+      color: #2a00e6;
+      margin-bottom: 5px;
+    }
+  
+    .timeline-content p {
+      font-size: 1rem;
+      color: var(--text-color);
+      margin: 6px 0;
+    }
+  
+    .timeline-content strong {
+      color: var(--primary-color);
+    }
+  
+    /* Timeline point */
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -14px;
+      top: 25px;
+      width: 18px;
+      height: 18px;
+      background: #00e0ff;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 10px #00e0ff, 0 0 20px #00e0ff, 0 0 30px #00e0ff;
+    }
+  
+    @media screen and (max-width: 768px) {
+      .timeline-item {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+  
+  <section id="education">
+    <h1><b>Education</b></h1>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>B.Tech in Computer Engineering</h3>
+          <p><strong>MIT Academy of Engineering, Pune</strong></p>
+          <p>2024 - Present</p>
+          <p><i>First Year (Ongoing)</i></p>
+          <p>First Semester SGPA: <b>9.25</b></p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Higher Secondary Education (PCM)</h3>
+          <p><strong>New English School & Jr. College of Science, Parner</strong></p>
+          <p>2022 - 2024</p>
+          <p>Grade: <b>85.17%</b></p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Secondary School Education</h3>
+          <p><strong>New English School, Hanga</strong></p>
+          <p>2016 - 2022</p>
+          <p>Grade: <b>88.40%</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
